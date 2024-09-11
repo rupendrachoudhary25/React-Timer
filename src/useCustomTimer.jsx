@@ -14,6 +14,7 @@ function useCustomTimer(initialValue) {
         if (prev === 0) {
           setIsRunning(false);
           clearInterval(interval.current);
+          setSeconds(initialValue)
           return prev;
         }
         return prev - 1;
